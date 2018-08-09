@@ -1,4 +1,4 @@
 module.exports = {
-  baseUrl: "/vue-disqus-embed",
+  baseUrl: "/vue-disqus-embed/",
   outputDir: "docs"
 }
