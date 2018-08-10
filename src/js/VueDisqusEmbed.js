@@ -1,4 +1,4 @@
-import VueDisqusEmbed from '@/components/VueDisqusEmbed'
+import VueDisqusEmbed from '../components/VueDisqusEmbed'
 
 export default {
   install (Vue, options) {

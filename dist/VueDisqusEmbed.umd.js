@@ -1747,14 +1747,17 @@ var es6_promise = __webpack_require__("551c");
 // EXTERNAL MODULE: ./node_modules/core-js/modules/es7.promise.finally.js
 var es7_promise_finally = __webpack_require__("097d");
 
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"6629ab1e-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/VueDisqusEmbed.vue?vue&type=template&id=2fc98dfa&
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"6629ab1e-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/VueDisqusEmbed.vue?vue&type=template&id=653b5143&
 var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{attrs:{"id":"disqus_thread"}})}
 var staticRenderFns = []
 
 
-// CONCATENATED MODULE: ./src/components/VueDisqusEmbed.vue?vue&type=template&id=2fc98dfa&
+// CONCATENATED MODULE: ./src/components/VueDisqusEmbed.vue?vue&type=template&id=653b5143&
 
 // CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js??ref--12-0!./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib!./node_modules/vue-loader/lib??vue-loader-options!./src/components/VueDisqusEmbed.vue?vue&type=script&lang=js&
+
+
+
 //
 //
 //
@@ -1812,6 +1815,10 @@ var staticRenderFns = []
   },
   methods: {
     resetInstance: function resetInstance() {
+      if (this.url && this.url.indexOf('#/') !== -1) {
+        throw 'VueDisqusEmbed: `url` can not in `hash` mode, can not contain `#/`';
+      }
+
       if (this.identifier && this.url) {
         this.$disqus_embed.load(this.getDisqusConfig());
       }
@@ -1967,7 +1974,7 @@ component.options.__file = "VueDisqusEmbed.vue"
     }
 
     if (window.location.hash.indexOf('#/') !== -1) {
-      throw 'VueDisqusEmbed: The plugin does not working with "hash" mode, Vue.router.mode should be "history"';
+      throw 'VueDisqusEmbed: The plugin does not working with `hash` mode, Vue.router.mode should be `history`';
     }
 
     Vue.prototype.$disqus_embed = {
