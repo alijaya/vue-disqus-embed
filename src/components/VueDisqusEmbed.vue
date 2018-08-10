@@ -58,6 +58,10 @@ export default {
   },
   methods: {
     resetInstance () {
+      if (this.url && this.url.indexOf('#/') !== -1) {
+        throw 'VueDisqusEmbed: `url` can not in `hash` mode, can not contain `#/`'
+      }
+
       if (this.identifier && this.url) {
         this.$disqus_embed.load(this.getDisqusConfig())
       }

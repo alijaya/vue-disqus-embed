@@ -8,7 +8,7 @@ export default {
     }
 
     if (window.location.hash.indexOf('#/') !== -1) {
-      throw 'VueDisqusEmbed: The plugin does not working with "hash" mode, Vue.router.mode should be "history"'
+      throw 'VueDisqusEmbed: The plugin does not working with `hash` mode, Vue.router.mode should be `history`'
     }
 
     Vue.prototype.$disqus_embed = {

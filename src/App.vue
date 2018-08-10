@@ -1,5 +1,6 @@
 <template>
   <div id="app">
+    <github-corners repo="alijaya/vue-disqus-embed" bg-color="teal" />
     <div id="nav">
       <router-link to="/">Home</router-link>
       <router-link to="/page-1">Page 1</router-link>
@@ -32,5 +33,9 @@
 /* change disqus link color */
 a {
   color: teal;
+}
+
+.github-corner {
+  display: block;
 }
 </style>
