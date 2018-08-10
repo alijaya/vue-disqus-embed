@@ -96,6 +96,16 @@ The `url` should be the final `url` used in production, and `identifier` need to
 </script>
 ```
 
+## Change Link Color
+
+You can change Disqus link color with changing global `a` color.
+
+```css
+a {
+  color: teal;
+}
+```
+
 ## Example
 
 [See the Demo](https://alijaya.github.io/vue-disqus-embed/) and [the corresponding code](https://github.com/alijaya/vue-disqus-embed/blob/master/src/views/Disqus.vue)
