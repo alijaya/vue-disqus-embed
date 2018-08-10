@@ -28,4 +28,9 @@
 #nav a {
   margin: 1rem;
 }
+
+/* change disqus link color */
+a {
+  color: teal;
+}
 </style>
