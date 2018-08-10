@@ -3,6 +3,8 @@ Vue Plugin for embedding Disqus.
 
 [See here the Demo](https://alijaya.github.io/vue-disqus-embed/)
 
+[See here for vue-disqus-count](https://github.com/alijaya/vue-disqus-count)
+
 ## Installation
 
 ```bash
